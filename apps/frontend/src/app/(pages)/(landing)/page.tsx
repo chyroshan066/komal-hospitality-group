@@ -2,6 +2,7 @@ import { About } from "@/components/About";
 import { Facilities } from "@/components/Facilities";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { LocalAmenities } from "@/components/LocalAmenities";
 import { Marquee } from "@/components/Marquee";
 import { NavPanel } from "@/components/NavPanel";
 import { PinnedContent } from "@/components/PinnedContent";
@@ -26,6 +27,7 @@ export default function Home() {
           <Facilities />
         </div>
         <Marquee />
+        <LocalAmenities />
       </main>
     </>
   );
