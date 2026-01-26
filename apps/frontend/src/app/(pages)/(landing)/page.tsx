@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { NavPanel } from "@/components/NavPanel";
 import { PinnedContent } from "@/components/PinnedContent";
 import { Preloader } from "@/components/Preloader";
+import { RoomCategories } from "@/components/RoomCategories";
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
         <div className="pattern_2">
           <About />
           <PinnedContent />
+        </div>
+        <div className="container margin_120_95">
+          <RoomCategories />
         </div>
       </main>
     </>
