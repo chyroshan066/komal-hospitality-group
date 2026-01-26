@@ -1,13 +1,14 @@
 import Link from "next/link";
+import { TitleHeader } from "./utility/TitleHeader";
 
 export const RoomCategories = () => (
   <>
-    <div className="title mb-3">
-      <small data-cue="slideInUp">Luxury experience</small>
-      <h2 data-cue="slideInUp" data-delay="200">
-        Rooms & Suites
-      </h2>
-    </div>
+    <TitleHeader
+      subtitle="Luxury experience"
+      title="Rooms & Suites"
+      className="mb-3"
+      delay={200}
+    />
     <div
       className="row justify-content-center add_bottom_90"
       data-cues="slideInUp"

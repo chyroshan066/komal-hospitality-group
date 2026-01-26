@@ -51,3 +51,6 @@ export interface NavLink extends Name, Href {}
 export interface Facility extends Title, Description, ClassName {
     icon: string;
 }
+
+// interface subtitle used once in TitleHeader
+// interface delay used once in TitleHeader

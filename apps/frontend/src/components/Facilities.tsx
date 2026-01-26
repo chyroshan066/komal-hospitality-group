@@ -1,5 +1,6 @@
 import { Facility } from "@/types";
 import { cn } from "@/utils/clsx";
+import { TitleHeader } from "./utility/TitleHeader";
 
 const FACILITIES: Facility[] = [
   {
@@ -43,12 +44,12 @@ const FacilityItem = ({ icon, title, description, className }: Facility) => {
 
 export const Facilities = () => (
   <>
-    <div className="title text-center mb-5">
-      <small data-cue="slideInUp">Paradise Hotel</small>
-      <h2 data-cue="slideInUp" data-delay="100">
-        Main Facilities
-      </h2>
-    </div>
+    <TitleHeader
+      subtitle="Paradise Hotel"
+      title="Main Facilities"
+      className="text-center mb-5"
+      delay={100}
+    />
     <div className="row mt-4">
       {FACILITIES.map((item, index) => (
         <FacilityItem
