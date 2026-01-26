@@ -1,3 +1,4 @@
+import { About } from "@/components/About";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { NavPanel } from "@/components/NavPanel";
@@ -12,6 +13,9 @@ export default function Home() {
       <NavPanel />
       <main>
         <Hero />
+        <div className="pattern_2">
+          <About />
+        </div>
       </main>
     </>
   );
