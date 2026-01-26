@@ -111,7 +111,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${caveat.variable} ${montserrat.variable} ${lora.className}`}
+        className={`${lora.variable} ${caveat.variable} ${montserrat.variable}`}
         suppressHydrationWarning={true}
       >
         {children}
@@ -119,8 +119,8 @@ export default function RootLayout({
 
         <Script src="/js/common_scripts.js" strategy="afterInteractive" />
         <Script src="/js/common_functions.js" strategy="afterInteractive" />
-        <Script src="/js/datepicker_search.js" strategy="afterInteractive" />
-        <Script src="/js/datepicker_inline.js" strategy="afterInteractive" />
+        {/* <Script src="/js/datepicker_search.js" strategy="afterInteractive" />
+        <Script src="/js/datepicker_inline.js" strategy="afterInteractive" /> */}
       </body>
     </html>
   );

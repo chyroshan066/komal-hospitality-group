@@ -1,7 +1,7 @@
 :root {
   --font-caveat: var(--font-caveat);
-  --font-montserrat: var(--font-montserrat);
   --font-lora: var(--font-lora);
+  --font-montserrat: var(--font-montserrat);
 }
 
 /* RESET */
@@ -13,7 +13,7 @@ body {
   /* font-size: 15px; */
   font-size: 0.9375rem;
   line-height: 1.6;
-  font-family: var(--font-montserrat), "Montserrat", Helvetica, sans-serif;
+  font-family: "Montserrat", Helvetica, sans-serif;
   color: #333;
 }
 main {
@@ -593,14 +593,14 @@ textarea.form-control {
 }
 
 /* PAGINATION */
-.clear:after, 
-.pagination:after, 
-.clear:before, 
+.clear:after,
+.pagination:after,
+.clear:before,
 .pagination:before {
   content: "";
   display: table;
 }
-.clear:after, 
+.clear:after,
 .pagination:after {
   clear: both;
 }
@@ -1607,6 +1607,8 @@ img.jarallax-img.kenburns-2 {
 .hero .wrapper {
   text-align: left;
   height: 100%;
+  position: relative;
+  z-index: 3;
 }
 .hero .wrapper small {
   text-transform: uppercase;
@@ -1642,6 +1644,8 @@ img.jarallax-img.kenburns-2 {
 /* Hero new datepicker */
 .hero.home-search {
   overflow: visible;
+  position: relative;
+  z-index: 1;
 }
 /* HERO BOOKING FORM */
 .booking_form {
@@ -1651,6 +1655,8 @@ img.jarallax-img.kenburns-2 {
   margin: 15px auto 0;
   position: relative;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 4;
 }
 .booking_form input {
   border: 0;
@@ -1771,7 +1777,7 @@ img.jarallax-img.kenburns-2 {
   right: 40px;
 }
 .intro em {
-  font-family: var(--font-caveat), "Caveat", cursive;
+  font-family: "Caveat", cursive;
   /* font-size: 32px; */
   font-size: 2rem;
   font-style: normal;
@@ -1791,6 +1797,13 @@ img.jarallax-img.kenburns-2 {
 }
 .form_wp #success_page h5 {
   color: white !important;
+}
+.btn_search {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn_search:hover {
+  opacity: 0.9;
 }
 /* CAROUSEL */
 #carousel-home {
@@ -3028,7 +3041,7 @@ a.box_contents:hover img {
 .banner .wrapper p {
   /* font-size: 18px; */
   font-size: 1.125rem;
-  font-family: var(--font-lora), "Lora", serif;
+  font-family: "Lora", serif;
 }
 .menu_item {
   position: relative;
@@ -3075,7 +3088,7 @@ a.box_contents:hover img {
   padding-left: 3px;
 }
 .menu_item p {
-  font-family: var(--font-lora), "Lora", serif;
+  font-family: "Lora", serif;
   margin-bottom: 0;
 }
 .menu_item figure a:hover img {
