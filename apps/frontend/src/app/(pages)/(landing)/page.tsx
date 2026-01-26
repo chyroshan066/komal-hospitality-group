@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { NavPanel } from "@/components/NavPanel";
 import { Preloader } from "@/components/Preloader";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       <Preloader />
       <div className="layer" />
       <Header />
+      <NavPanel />
     </>
   );
 }
