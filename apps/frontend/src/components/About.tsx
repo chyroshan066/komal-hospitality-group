@@ -1,12 +1,27 @@
+import Image from "next/image";
+
 export const About = () => (
   <div className="container margin_120_95" id="first_section">
     <div className="row justify-content-between flex-lg-row-reverse align-items-center">
       <div className="col-lg-5">
         <div className="parallax_wrapper">
-          <img src="/images/home_2.jpg" alt="" className="img-fluid rounded-img" />
+          <Image 
+            src="/images/home_2.jpg" 
+            alt="About us background" 
+            width={600} 
+            height={750}
+            className="img-fluid rounded-img" 
+            priority 
+          />
           <div data-cue="slideInUp" className="img_over">
             <span data-jarallax-element="-30">
-              <img src="/images/home_1.jpg" alt="" className="rounded-img" />
+              <Image 
+                src="/images/home_1.jpg" 
+                alt="Owner" 
+                width={600} 
+                height={830} 
+                className="rounded-img" 
+              />
             </span>
           </div>
         </div>
@@ -28,7 +43,7 @@ export const About = () => (
             dicta sunt explicabo.
           </p>
           <p>
-            <em>Maria...the Owner</em>
+            <em>Maria...the Owner</em>  {/*  <em> tag indicate emphasis */}
           </p>
         </div>
       </div>
