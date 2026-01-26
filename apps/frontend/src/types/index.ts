@@ -47,3 +47,7 @@ interface Href {
 }
 
 export interface NavLink extends Name, Href {}
+
+export interface Facility extends Title, Description, ClassName {
+    icon: string;
+}

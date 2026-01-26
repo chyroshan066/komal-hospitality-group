@@ -1,4 +1,5 @@
 import { About } from "@/components/About";
+import { Facilities } from "@/components/Facilities";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { NavPanel } from "@/components/NavPanel";
@@ -21,6 +22,7 @@ export default function Home() {
         </div>
         <div className="container margin_120_95">
           <RoomCategories />
+          <Facilities />
         </div>
       </main>
     </>
