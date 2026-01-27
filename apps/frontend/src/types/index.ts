@@ -52,5 +52,10 @@ export interface Facility extends Title, Description, ClassName {
     icon: string;
 }
 
+export interface Testimonial extends ImgSrc, Name {
+    date: string;
+    comment: string;
+}
+
 // interface subtitle used once in TitleHeader
 // interface delay used once in TitleHeader
