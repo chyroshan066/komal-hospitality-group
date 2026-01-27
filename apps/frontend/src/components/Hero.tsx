@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { Overlay } from "./utility/Overlay";
 
 export const Hero = () => {
   const [adults, setAdults] = useState<number>(1);
@@ -53,10 +54,12 @@ export const Hero = () => {
       }}
       data-speed="0.2"
     >
-      <div
-        className={`wrapper opacity-mask d-flex align-items-center justify-content-center text-center ${isAnimated ? "is-transitioned" : ""}`}
-        data-opacity-mask="rgba(0, 0, 0, 0.5)"
-      >
+      {/* <img
+      className="jarallax-img kenburns-2"
+      src="/images/hero_home_1.jpg"
+      alt=""
+    /> */}
+      <Overlay className={isAnimated ? "is-transitioned" : ""}>
         <div className="container">
           <small className="slide-animated one">Luxury Hotel Experience</small>
           <h3 className="slide-animated two">
@@ -160,7 +163,7 @@ export const Hero = () => {
           </Link>
         </div>
         {/* mouse_wp  */}
-      </div>
+      </Overlay>
     </div>
   );
 };

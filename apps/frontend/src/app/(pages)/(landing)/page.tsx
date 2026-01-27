@@ -8,6 +8,7 @@ import { NavPanel } from "@/components/NavPanel";
 import { PinnedContent } from "@/components/PinnedContent";
 import { Preloader } from "@/components/Preloader";
 import { RoomCategories } from "@/components/RoomCategories";
+import { Testimonials } from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         </div>
         <Marquee />
         <LocalAmenities />
+        <Testimonials />
       </main>
     </>
   );
