@@ -117,6 +117,14 @@ export default function RootLayout({
         {children}
         <AnalyticsWrapper />
 
+        <Script
+          src="https://code.jquery.com/jquery-3.7.1.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"
+          strategy="afterInteractive"
+        />
         <Script src="/js/common_scripts.js" strategy="afterInteractive" />
         <Script src="/js/common_functions.js" strategy="afterInteractive" />
         {/* <Script src="/js/datepicker_search.js" strategy="afterInteractive" />
