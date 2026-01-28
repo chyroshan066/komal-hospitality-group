@@ -1,4 +1,5 @@
 import { About } from "@/components/About";
+import { BackToTop } from "@/components/BackToTop";
 import { Booking } from "@/components/Booking";
 import { Facilities } from "@/components/Facilities";
 import { Footer } from "@/components/Footer";
@@ -35,6 +36,7 @@ export default function Home() {
         <Booking />
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }
