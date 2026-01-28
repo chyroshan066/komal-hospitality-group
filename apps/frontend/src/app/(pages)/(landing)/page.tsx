@@ -1,6 +1,7 @@
 import { About } from "@/components/About";
-// import { Booking } from "@/components/Booking";
+import { Booking } from "@/components/Booking";
 import { Facilities } from "@/components/Facilities";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { LocalAmenities } from "@/components/LocalAmenities";
@@ -31,8 +32,9 @@ export default function Home() {
         <Marquee />
         <LocalAmenities />
         <Testimonials />
-        {/* <Booking /> */}
+        <Booking />
       </main>
+      <Footer />
     </>
   );
 }

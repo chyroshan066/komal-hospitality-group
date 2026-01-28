@@ -7,51 +7,53 @@ export const Booking = () => {
     // We check if easepick is available on the window object
     const initEasepick = () => {
       // @ts-ignore
-      if (typeof easepick !== 'undefined') {
+      if (typeof easepick !== "undefined") {
         // @ts-ignore
         const DateTime = easepick.DateTime;
-        
+
         const bookedDates = [
-          ['2023-09-01', '2023-09-04'],
-          '2023-09-07',
-          ['2023-10-11', '2023-10-17'],
-        ].map(d => {
+          ["2023-09-01", "2023-09-04"],
+          "2023-09-07",
+          ["2023-10-11", "2023-10-17"],
+        ].map((d) => {
           if (Array.isArray(d)) {
-            const start = new DateTime(d[0], 'YYYY-MM-DD');
-            const end = new DateTime(d[1], 'YYYY-MM-DD');
+            const start = new DateTime(d[0], "YYYY-MM-DD");
+            const end = new DateTime(d[1], "YYYY-MM-DD");
             return [start, end];
           }
-          return new DateTime(d, 'YYYY-MM-DD');
+          return new DateTime(d, "YYYY-MM-DD");
         });
 
         // @ts-ignore
         new easepick.create({
-          element: document.getElementById('date_booking'),
+          element: document.getElementById("date_booking"),
           css: [
-            'https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.css',
-            '/css/daterangepicker_v2.css', 
+            "https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.css",
+            "/css/daterangepicker_v2.css",
           ],
-          lang: 'en-EN',
+          lang: "en-EN",
           format: "DD/MM/YYYY",
           calendars: 2,
           grid: 2,
           zIndex: 10,
           inline: true,
-          plugins: ['LockPlugin', 'RangePlugin'],
+          plugins: ["LockPlugin", "RangePlugin"],
           RangePlugin: {
-            tooltipNumber(num: number) { return num - 1; },
-            locale: { one: 'night', other: 'nights' },
+            tooltipNumber(num: number) {
+              return num - 1;
+            },
+            locale: { one: "night", other: "nights" },
           },
           LockPlugin: {
             minDate: new Date(),
             minDays: 1,
             inseparable: false,
             filter(date: any) {
-              return bookedDates.some(d => {
+              return bookedDates.some((d) => {
                 if (Array.isArray(d)) {
-                  return date.isBetween(d[0], d[1], '[]');
+                  return date.isBetween(d[0], d[1], "[]");
                 }
-                return date.isSame(d, 'day');
+                return date.isSame(d, "day");
               });
             },
           },
@@ -92,7 +94,12 @@ export const Booking = () => {
           <div data-cue="slideInUp" data-delay="200">
             <div className="booking_wrapper">
               <div className="col-12">
-                <input type="hidden" id="date_booking" name="date_booking" />
+                <input
+                  type="hidden"
+                  id="date_booking"
+                  name="date_booking"
+                  readOnly
+                />
               </div>
               <div className="row">
                 <div className="col-lg-6">
@@ -120,7 +127,7 @@ export const Booking = () => {
                           type="text"
                           name="adults_booking"
                           id="adults_booking"
-                          value=""
+                          defaultValue="Adult"
                           className="qty form-control"
                           placeholder="Adults"
                         />
@@ -144,7 +151,7 @@ export const Booking = () => {
                           type="text"
                           name="childs_booking"
                           id="childs_booking"
-                          value=""
+                          defaultValue="Child"
                           className="qty form-control"
                           placeholder="Childs"
                         />

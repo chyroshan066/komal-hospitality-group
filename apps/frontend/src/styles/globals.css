@@ -2177,7 +2177,7 @@ footer .copy {
 }
 .social ul li {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 7px;
 }
 .social ul li a {
   display: block;
@@ -2292,6 +2292,18 @@ footer .copy {
 }
 #newsletter button[type="submit"]:hover {
   opacity: 1;
+}
+#newsletter .form-control::placeholder {
+  color: #fff;           
+  opacity: 0.3;          
+}
+/* For Internet Explorer and Edge */
+#newsletter .form-control:-ms-input-placeholder {
+  color: #fff;
+}
+/* For older versions of Chrome/Safari */
+#newsletter .form-control::-webkit-input-placeholder {
+  color: #fff;
 }
 /* Opacity mask when left open */
 .layer {
@@ -3923,6 +3935,14 @@ a.box_contents:hover img {
   .row_list_version_2.inverted .box_item_info {
     margin: -50px 30px 0 30px;
   }
+  
+  /* FOOTER */
+  footer.revealed {
+    position: static;
+  }
+  main {
+    margin-bottom: 0 !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -4029,5 +4049,22 @@ a.box_contents:hover img {
     color: #978667 !important;
     padding-left: 20px;
     opacity: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* FOOTER */
+  footer.revealed {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1; 
+  }
+  main {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 450px; /* Default height fallback */
+    background-color: #faf8f5; /* Ensures main hides the footer until scrolled */
   }
 }
