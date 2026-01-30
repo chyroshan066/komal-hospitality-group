@@ -2397,7 +2397,7 @@ footer a:hover {
 }
 
 /* ROOM LIST */
-.box_item_info {
+/* .box_item_info {
   background-color: #fff;
   z-index: 9;
   position: relative;
@@ -2477,18 +2477,18 @@ footer a:hover {
 .row_list_version_3 .box_item_info {
   max-width: 750px;
   margin: -100px 60px 60px 60px;
-}
+} */
 /* remove from Booking.module.css if used elsewhere */
 /* .booking_wrapper {
   border-radius: 10px;
   background-color: rgba(151, 134, 103, 0.05);
   padding: 20px 20px 0 20px;
 } */
-.booking_wrapper hr {
+/* .booking_wrapper hr {
   border-color: #d9e1e6;
   opacity: 1;
   margin: 0 0 25px 0;
-}
+} */
 /* remove from Booking.module.css if used elsewhere */
 /* .booking_wrapper .form-control::-moz-placeholder {
   color: #333;
@@ -2496,10 +2496,10 @@ footer a:hover {
 .booking_wrapper .form-control::placeholder {
   color: #333;
 } */
-.owl-carousel.border-radius .owl-item {
+/* .owl-carousel.border-radius .owl-item {
   border-radius: 10px;
   overflow: hidden;
-}
+} */
 
 /* ROOOM DETAILS */
 .room_facilities_list ul {
@@ -3468,7 +3468,7 @@ a.box_contents:hover img {
   } */
 
   /* ROOM LIST */
-  .box_item_info .facilities ul li {
+  /* .box_item_info .facilities ul li {
     float: none;
     width: 100%;
   }
@@ -3490,7 +3490,7 @@ a.box_contents:hover img {
   .row_list_version_3 .box_item_info {
     margin: -40px 10px 0 10px;
     padding: 20px 25px 10px 25px;
-  }
+  } */
 
   /* ROOM DETAILS */
   .review_card .user_info {
@@ -3795,12 +3795,12 @@ a.box_contents:hover img {
   }
 
   /* ROOM LIST */
-  .row_list_version_2 .box_item_info {
+  /* .row_list_version_2 .box_item_info {
     margin: -150px 30px 0 30px;
   }
   .row_list_version_2.inverted .box_item_info {
     margin: -50px 30px 0 30px;
-  }
+  } */
   
   /* FOOTER */
   /* footer.revealed {
