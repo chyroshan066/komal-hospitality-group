@@ -1,37 +1,41 @@
+import { cn } from "@/utils/clsx";
+import styles from "./About.module.css";
 import Image from "next/image";
+import { TitleHeader } from "../utility/TitleHeader";
 
 export const About = () => (
   <div className="container margin_120_95" id="first_section">
     <div className="row justify-content-between flex-lg-row-reverse align-items-center">
       <div className="col-lg-5">
-        <div className="parallax_wrapper">
-          <Image 
-            src="/images/home_2.jpg" 
-            alt="About us background" 
-            width={600} 
+        <div className={styles.parallax_wrapper}>
+          <Image
+            src="/images/home_2.jpg"
+            alt="About us background"
+            width={600}
             height={750}
-            className="img-fluid rounded-img" 
-            priority 
+            className={cn("img-fluid", styles.roundedImg)}
+            priority
           />
-          <div data-cue="slideInUp" className="img_over">
+          <div data-cue="slideInUp" className={styles.img_over}>
             <span data-jarallax-element="-30">
-              <Image 
-                src="/images/home_1.jpg" 
-                alt="Owner" 
-                width={600} 
-                height={830} 
-                className="rounded-img" 
+              <Image
+                src="/images/home_1.jpg"
+                alt="Owner"
+                width={600}
+                height={830}
+                className={styles.roundedImg}
               />
             </span>
           </div>
         </div>
       </div>
       <div className="col-lg-5">
-        <div className="intro">
-          <div className="title">
-            <small>About us</small>
-            <h2>Tailored services and the experience of unique holidays</h2>
-          </div>
+        <div className={styles.intro}>
+          <TitleHeader
+            subtitle="About us"
+            title="Tailored services and the experience of unique holidays"
+            animation={false}
+          />
           <p className="lead">
             Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat
             dignissim.
@@ -43,7 +47,7 @@ export const About = () => (
             dicta sunt explicabo.
           </p>
           <p>
-            <em>Maria...the Owner</em>  {/*  <em> tag indicate emphasis */}
+            <em>Maria...the Owner</em> {/*  <em> tag indicate emphasis */}
           </p>
         </div>
       </div>

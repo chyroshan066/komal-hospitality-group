@@ -1,5 +1,7 @@
 "use client";
 
+import { cn } from "@/utils/clsx";
+import styles from "./Footer.module.css";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 
@@ -27,16 +29,16 @@ export const Footer = () => {
   }, []);
 
   return (
-    <footer ref={footerRef} className="revealed">
-      <div className="footer_bg">
-        <div className="gradient_over" />
+    <footer ref={footerRef} className={styles.revealed}>
+      <div className={styles.footer_bg}>
+        <div className={styles.gradient_over} />
         <div
-          className="background-image"
-          data-background="url(/images/rooms/3.jpg)"
+          className={styles.backgroundImage}
+          style={{ backgroundImage: 'url(/images/rooms/3.jpg)' }}
         />
       </div>
       <div className="container">
-        <div className="row move_content">
+        <div className={cn("row", styles.move_content)}>
           <div className="col-lg-4 col-md-12">
             <h5>Contacts</h5>
             <ul>
@@ -58,7 +60,7 @@ export const Footer = () => {
                 </strong>
               </li>
             </ul>
-            <div className="social">
+            <div className={styles.social}>
               <ul>
                 <li>
                   <a href="#0">
@@ -85,7 +87,7 @@ export const Footer = () => {
           </div>
           <div className="col-lg-3 col-md-6 ms-lg-auto">
             <h5>Explore</h5>
-            <div className="footer_links">
+            <div className={styles.footer_links}>
               <ul>
                 <li>
                   <Link href="index.html">Home</Link>
@@ -116,18 +118,15 @@ export const Footer = () => {
                 method="post"
                 action="#"
                 name="newsletter_form"
-                id="newsletter_form"
-                // onSubmit="event.preventDefault(); alert('Newsletter subscription is disabled in this demo.');"
               >
-                <div className="form-group">
+                <div className={cn("form-group", styles.formGroup)}>
                   <input
                     type="email"
                     name="email_newsletter"
-                    id="email_newsletter"
-                    className="form-control"
+                    className={cn("form-control", styles.formControl)}
                     placeholder="Your email"
                   />
-                  <button type="submit" id="submit-newsletter">
+                  <button type="submit" className={styles.submitNewsletter} >
                     <i className="bi bi-send" />
                   </button>
                 </div>
@@ -140,7 +139,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="copy">
+      <div className={styles.copy}>
         <div className="container">
           © Paradise - by <a href="#">Ansonika</a>
         </div>

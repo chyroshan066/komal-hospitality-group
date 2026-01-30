@@ -1,7 +1,8 @@
+import { cn } from "@/utils/clsx";
 import Image from "next/image";
 
 export const PinnedContent = () => (
-  <div className="pinned-image pinned-image--medium">
+  <div className={cn("pinned-image--medium", "pinned-image")}>
     <div className="pinned-image__container" id="section_video">
       <Image
         src="/images/home_1.jpg"

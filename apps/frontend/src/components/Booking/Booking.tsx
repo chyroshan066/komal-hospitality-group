@@ -1,6 +1,9 @@
 "use client";
 
+import { cn } from "@/utils/clsx";
+import styles from "./Booking.module.css";
 import { useEffect } from "react";
+import { TitleHeader } from "../utility/TitleHeader";
 
 export const Booking = () => {
   useEffect(() => {
@@ -71,16 +74,17 @@ export const Booking = () => {
       <div className="row justify-content-between">
         <div className="col-xl-4">
           <div data-cue="slideInUp">
-            <div className="title">
-              <small>Paradise Hotel</small>
-              <h2>Check Availability</h2>
-            </div>
+            <TitleHeader
+              subtitle="Paradise Hotel"
+              title="Check Availability"
+              animation={false}
+            />
             <p>
               Mea nibh meis philosophia eu. Duis legimus efficiantur ea sea. Id
               placerat tacimates definitionem sea, prima quidam vim no. Duo
               nobis persecuti cu.
             </p>
-            <p className="phone_element no_borders">
+            <p className={cn("phone_element", styles.no_borders)}>
               <a href="tel://423424234">
                 <i className="bi bi-telephone" />
                 <span>
@@ -92,7 +96,7 @@ export const Booking = () => {
         </div>
         <div className="col-xl-7">
           <div data-cue="slideInUp" data-delay="200">
-            <div className="booking_wrapper">
+            <div className={styles.booking_wrapper}>
               <div className="col-12">
                 <input
                   type="hidden"
@@ -116,11 +120,11 @@ export const Booking = () => {
                 <div className="col-lg-6">
                   <div className="row">
                     <div className="col-6">
-                      <div className="qty-buttons mb-3 version_2">
+                      <div className={cn("qty-buttons mb-3", styles.version_2)}>
                         <input
                           type="button"
                           value="+"
-                          className="qtyplus"
+                          className={cn("qtyplus", styles.qtyplus)}
                           name="adults_booking"
                         />
                         <input
@@ -128,23 +132,32 @@ export const Booking = () => {
                           name="adults_booking"
                           id="adults_booking"
                           defaultValue="Adult"
-                          className="qty form-control"
+                          className={cn(
+                            "qty form-control",
+                            styles.formControl,
+                            styles.qty,
+                          )}
                           placeholder="Adults"
                         />
                         <input
                           type="button"
                           value="-"
-                          className="qtyminus"
+                          className={cn("qtyminus", styles.qtyminus)}
                           name="adults_booking"
                         />
                       </div>
                     </div>
                     <div className="col-6">
-                      <div className="mb-3 qty-buttons mb-3 version_2">
+                      <div
+                        className={cn(
+                          "mb-3 qty-buttons mb-3",
+                          styles.version_2,
+                        )}
+                      >
                         <input
                           type="button"
                           value="+"
-                          className="qtyplus"
+                          className={cn("qtyplus", styles.qtyplus)}
                           name="childs_booking"
                         />
                         <input
@@ -152,13 +165,17 @@ export const Booking = () => {
                           name="childs_booking"
                           id="childs_booking"
                           defaultValue="Child"
-                          className="qty form-control"
+                          className={cn(
+                            "qty form-control",
+                            styles.formControl,
+                            styles.qty,
+                          )}
                           placeholder="Childs"
                         />
                         <input
                           type="button"
                           value="-"
-                          className="qtyminus"
+                          className={cn("qtyminus", styles.qtyminus)}
                           name="childs_booking"
                         />
                       </div>

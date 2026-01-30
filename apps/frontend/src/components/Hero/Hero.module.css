@@ -1,0 +1,167 @@
+.fullHeight {
+  height: 100vh;
+}
+.hero small {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: block;
+  margin: 0 0 10px 0;
+  color: #ebd7b2;
+  font-weight: 600;
+}
+.hero h1,
+.hero h3 {
+  color: #fff;
+  font-size: 3.1875rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.hero p {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+.hero p strong {
+  font-weight: 600;
+}
+/* Hero new datepicker */
+.homeSearch {
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+/* HERO BOOKING FORM */
+.booking_form {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 15px auto 0;
+  position: relative;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 4;
+}
+.booking_form input {
+  border: 0;
+  height: 50px;
+  padding-left: 15px;
+  border-radius: 0;
+  background-color: transparent;
+  border-right: 1px solid #d9e1e6;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: #6c757d;
+}
+.booking_form input:focus {
+  box-shadow: none;
+  border-right: 1px solid #d9e1e6;
+}
+.formGroup {
+  margin: 0;
+  position: relative;
+}
+.formGroup i {
+  border-radius: 3px;
+  font-size: 1.3125rem;
+  position: absolute;
+  line-height: 50px;
+  top: 2px;
+  right: 4px;
+  padding-right: 15px;
+  display: block;
+  width: 20px;
+  box-sizing: content-box;
+  height: 50px;
+  z-index: 1;
+  color: #978667;
+}
+.booking_form input[type="submit"] {
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border: 0;
+  height: 50px;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  border-radius: 3px;
+  background-color: #4b514d;
+  margin-right: 5px;
+}
+.booking_form input[type="submit"]:hover {
+  background-color: #978667;
+  color: #fff;
+}
+/* Quantity incrementer input */
+.qtyButtons label {
+  position: absolute;
+  color: #999;
+  left: 15px;
+  top: 13px;
+  font-weight: 500;
+  color: #6c757d;
+  font-size: 0.9375rem;
+}
+.btn_search {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn_search:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 991px) {
+  .fullHeight {
+    min-height: 600px;
+  }
+  /* Hero new datepicker */
+  .homeSearch {
+    z-index: 9999 !important;
+  }
+  /* HERO BOOKING FORM */
+  .booking_form {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+  .booking_form input {
+    border: none;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .booking_form input:focus {
+    border-right: none;
+  }
+  .booking_form .formGroup {
+    margin-bottom: 5px;
+  }
+  .booking_form input[type="submit"] {
+    margin: 20px 0 0 0;
+    border-radius: 3px;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullHeight {
+    height: 87vh;
+  }
+  .hero h1,
+  .hero h3 {
+    font-size: 2.25rem;
+  }
+  .hero p {
+    padding: 0;
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero h1,
+  .hero h3 {
+    font-size: 2rem;
+  }
+}

@@ -1,3 +1,5 @@
+import { cn } from "@/utils/clsx";
+import styles from "./LocalAmenities.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,14 +8,20 @@ export const LocalAmenities = () => (
     <div className="container margin_120_95">
       <div className="row justify-content-between d-flex align-items-center add_bottom_90">
         <div className="col-lg-6">
-          <div className="pinned-image rounded_container pinned-image--small mb-4">
+          <div
+            className={cn(
+              "pinned-image mb-4",
+              styles.rounded_container,
+              styles.pinned_image__small,
+            )}
+          >
             <div className="pinned-image__container">
               <Image
-                src="/images/local_amenities_1.jpg" 
-                alt="Restaurants" 
-                fill 
+                src="/images/local_amenities_1.jpg"
+                alt="Restaurants"
+                fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: "cover" }}
               />
             </div>
           </div>
@@ -38,14 +46,20 @@ export const LocalAmenities = () => (
       </div>
       <div className="row justify-content-between d-flex align-items-center">
         <div className="col-lg-6 order-lg-2">
-          <div className="pinned-image rounded_container pinned-image--small mb-4">
+          <div
+            className={cn(
+              "pinned-image mb-4",
+              styles.rounded_container,
+              styles.pinned_image__small,
+            )}
+          >
             <div className="pinned-image__container">
-              <Image 
-                src="/images/local_amenities_3.jpg" 
-                alt="Art & Culture" 
-                fill 
+              <Image
+                src="/images/local_amenities_3.jpg"
+                alt="Art & Culture"
+                fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: "cover" }}
               />
             </div>
           </div>

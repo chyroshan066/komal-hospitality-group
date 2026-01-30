@@ -1,0 +1,29 @@
+.no_borders {
+  padding-top: 5px;
+  border-top: none;
+}
+.booking_wrapper {
+  border-radius: 10px;
+  background-color: rgba(151, 134, 103, 0.05);
+  padding: 20px 20px 0 20px;
+}
+.formControl {
+  height: 50px;
+}
+.formControl::-moz-placeholder {
+  color: #333;
+}
+.formControl::placeholder {
+  color: #333;
+}
+.version_2 input.qty {
+  padding-left: 15px;
+}
+.version_2 input.qtyplus {
+  background: #fff url(/images/plus.svg) no-repeat center center;
+  right: 5px;
+}
+.version_2 input.qtyminus {
+  background: #fff url(/images/minus.svg) no-repeat center center;
+  right: 40px;
+}

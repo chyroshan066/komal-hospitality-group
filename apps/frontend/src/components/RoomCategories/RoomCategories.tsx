@@ -1,5 +1,7 @@
+import styles from "./RoomCategories.module.css";
 import Link from "next/link";
-import { TitleHeader } from "./utility/TitleHeader";
+import { TitleHeader } from "../utility/TitleHeader";
+import { cn } from "@/utils/clsx";
 
 export const RoomCategories = () => (
   <>
@@ -15,13 +17,13 @@ export const RoomCategories = () => (
       data-delay="300"
     >
       <div className="col-xl-6 col-lg-12 col-md-12 col-sm-12">
-        <Link href="#" className="box_cat_rooms">
+        <Link href="#" className={styles.box_cat_rooms}>
           <figure>
             <div
-              className="background-image"
+              className={cn("background-image", styles.backgroundImage)}
               data-background="url(/images/rooms/1.jpg)"
             />
-            <div className="info">
+            <div className={styles.info}>
               <small>From $250/night</small>
               <h3>Junior Suite</h3>
               <span>Read more</span>
@@ -30,13 +32,13 @@ export const RoomCategories = () => (
         </Link>
       </div>
       <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-        <Link href="#" className="box_cat_rooms">
+        <Link href="#" className={styles.box_cat_rooms}>
           <figure>
             <div
-              className="background-image"
+              className={cn("background-image", styles.backgroundImage)}
               data-background="url(/images/rooms/2.jpg)"
             />
-            <div className="info">
+            <div className={styles.info}>
               <small>From $190/night</small>
               <h3>Deluxe Room</h3>
               <span>Read more</span>
@@ -45,13 +47,13 @@ export const RoomCategories = () => (
         </Link>
       </div>
       <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-        <Link href="#" className="box_cat_rooms">
+        <Link href="#" className={styles.box_cat_rooms}>
           <figure>
             <div
-              className="background-image"
+              className={cn("background-image", styles.backgroundImage)}
               data-background="url(/images/rooms/3.jpg)"
             />
-            <div className="info">
+            <div className={styles.info}>
               <small>From $240/night</small>
               <h3>Superior Room</h3>
               <span>Read more</span>

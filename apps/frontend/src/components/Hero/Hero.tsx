@@ -1,23 +1,19 @@
 "use client";
 
+import styles from "./Hero.module.css";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import { Overlay } from "./utility/Overlay";
+import { useRef, useState } from "react";
+import { Overlay } from "../utility/Overlay/Overlay";
+import { cn } from "@/utils/clsx";
+import { useAnimationTrigger } from "@/hooks/useAnimationTrigger";
+import { HeroTitleHeader } from "../utility/TitleHeader";
 
 export const Hero = () => {
   const [adults, setAdults] = useState<number>(1);
   const [children, setChildren] = useState<number>(0);
   const [dates, setDates] = useState<string>("");
-  const [isAnimated, setIsAnimated] = useState<boolean>(false);
   const heroRef = useRef<HTMLDivElement>(null);
-
-  // Trigger animations on mount
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsAnimated(true);
-    }, 100);
-    return () => clearTimeout(timer);
-  }, []);
+  const isAnimated = useAnimationTrigger();
 
   // handlers for quantity buttons
   const handleQuantityChange = (
@@ -45,7 +41,12 @@ export const Hero = () => {
   return (
     <div
       ref={heroRef}
-      className="hero home-search full-height jarallax"
+      className={cn(
+        "hero full-height jarallax",
+        styles.homeSearch,
+        styles.hero,
+        styles.fullHeight,
+      )}
       style={{
         backgroundImage: `url(/images/hero_home_1.jpg)`,
         backgroundSize: "cover",
@@ -60,19 +61,17 @@ export const Hero = () => {
       alt=""
     /> */}
       <Overlay className={isAnimated ? "is-transitioned" : ""}>
-        <div className="container">
-          <small className="slide-animated one">Luxury Hotel Experience</small>
-          <h3 className="slide-animated two">
-            A unique Experience
-            <br />
-            where to stay
-          </h3>
+        <HeroTitleHeader
+          subtitle="Luxury Hotel Experience"
+          title="A unique Experience"
+          title2="where to stay"
+        >
           <div className="row justify-content-center slide-animated three">
             <div className="col-xl-10">
               <form onSubmit={handleSearch}>
-                <div className="row g-0 booking_form">
+                <div className={cn("row g-0", styles.booking_form)}>
                   <div className="col-lg-4 ">
-                    <div className="form-group">
+                    <div className={cn("form-group", styles.formGroup)}>
                       <input
                         className="form-control"
                         type="text"
@@ -85,7 +84,7 @@ export const Hero = () => {
                     </div>
                   </div>
                   <div className="col-lg-3 col-sm-6 pe-lg-0 pe-sm-1">
-                    <div className="qty-buttons">
+                    <div className={cn("qty-buttons", styles.qtyButtons)}>
                       <label>Adults</label>
                       <input
                         type="button"
@@ -114,7 +113,7 @@ export const Hero = () => {
                     </div>
                   </div>
                   <div className="col-lg-3 col-sm-6 ps-lg-0 ps-sm-1">
-                    <div className="qty-buttons">
+                    <div className={cn("qty-buttons", styles.qtyButtons)}>
                       <label>Childs</label>
                       <input
                         type="button"
@@ -147,7 +146,7 @@ export const Hero = () => {
                   <div className="col-lg-2">
                     <input
                       type="submit"
-                      className="btn_search"
+                      className={styles.btn_search}
                       value="Search"
                       onClick={handleSearch}
                     />
@@ -156,7 +155,7 @@ export const Hero = () => {
               </form>
             </div>
           </div>
-        </div>
+        </HeroTitleHeader>
         <div className="mouse_wp slide-animated four">
           <Link href="#first_section" className="btn_scrollto">
             <div className="mouse" />

@@ -57,5 +57,11 @@ export interface Testimonial extends ImgSrc, Name {
     comment: string;
 }
 
+export interface OnToggleNav {
+    onToggleNav: () => void;
+}
+
 // interface subtitle used once in TitleHeader
 // interface delay used once in TitleHeader
+// interface animation used once in TitleHeader
+// interface title2 used once in TitleHeader

@@ -1,15 +1,24 @@
+import { cn } from "@/utils/clsx";
+import styles from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { OnToggleNav } from "@/types";
 
-export const Header = () => (
+export const Header = ({ onToggleNav }: OnToggleNav) => (
   <header className="reveal_header">
     <div className="container">
       <div className="row align-items-center">
         <div className="col-6">
-          <Link href="index.html" className="logo_normal">
+          <Link
+            href="index.html"
+            className={cn("logo_normal", styles.logo_normal)}
+          >
             <Image src="/images/logo.png" width={135} height={45} alt="" />
           </Link>
-          <Link href="index.html" className="logo_sticky">
+          <Link
+            href="index.html"
+            className={cn("logo_sticky", styles.logo_sticky)}
+          >
             <Image
               src="/images/logo_sticky.png"
               width={135}
@@ -27,9 +36,17 @@ export const Header = () => (
                 </a>
               </li>
               <li>
-                <div className="hamburger_2 open_close_nav_panel">
-                  <div className="hamburger__box">
-                    <div className="hamburger__inner"></div>
+                <div
+                  className={cn("open_close_nav_panel", styles.hamburger_2)}
+                  onClick={onToggleNav}
+                >
+                  <div className={styles.hamburger__box}>
+                    <div
+                      className={cn(
+                        "hamburger__inner",
+                        styles.hamburger__inner,
+                      )}
+                    />
                   </div>
                 </div>
               </li>

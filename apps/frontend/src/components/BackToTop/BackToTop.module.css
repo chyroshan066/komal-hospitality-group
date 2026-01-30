@@ -1,0 +1,51 @@
+.progressWrap {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  border-radius: 50px;
+  z-index: 999;
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 200ms linear;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+.progressWrap::after {
+  position: absolute;
+  font-family: "bootstrap-icons";
+  content: "\f145";
+  text-align: center;
+  line-height: 46px;
+  font-size: 24px;
+  color: #999;
+  left: 0;
+  top: 0;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+  transition: all 200ms linear;
+}
+.progressWrap:hover::after {
+  color: #978667;
+}
+.progressWrap svg path {
+  fill: none;
+}
+.progressCircle path {
+  stroke: #978667;
+  stroke-width: 4;
+  box-sizing: border-box;
+  transition: all 200ms linear;
+}
+
+@media (max-width: 991px) {
+  .progressWrap {
+    display: none !important;
+  }
+}
